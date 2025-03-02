@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#F4F7FF] transition duration-500"">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- google font poppins cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- daisy ui and tailwind cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- styles  -->
+    <style>
+        body{
+                font-family: "Poppins", sans-serif;
+            }
+    </style>
+</head>
+
+<body class="font-poppins">
+    <!-- header part start  -->
+    <header class="w-10/12 mx-auto mt-3">
+        <div class="navbar p-6 bg-base-100 border border-blue-50 rounded-xl">
+            <div class="navbar-start">
+                <a class="flex items-center gap-2 text-xl"><img class="w-8" src="assets/logo.png" alt="">
+                    <h1 class="font-bold"><span class="font-light">Dev</span>Board</h1>
+                </a>
+            </div>
+            <div class="navbar-end gap-9">
+                <button id="back-to-desk" class="btn bg-[#3752FD] text-white rounded-lg back-to-desk">Back To Desk</button>
+            </div>
+        </div>
+    </header>
+    <!-- header part end  -->
+
+    <!-- main part start  -->
+    <main class="w-10/12 mx-auto mt-3 rounded-xl mb-10 space-y-5">
+        <h1 class="text-center text-xl font-bold">Blogs</h1>
+        <section class="space-y-5">
+            <div class="bg-white rounded-xl p-6">
+                <h1 class="font-bold border-b border-dashed border-red-100 pb-2">Question-1: What are the different ways to select an element in DOM?</h1>
+                <p class="pt-2">In DOM we can select an element by many ways like getElementById(), getElementsByClassName(), querySelector(), querySelectorAll()</p>
+            </div>
+            <div class="bg-white rounded-xl p-6">
+                <h1 class="font-bold border-b border-dashed border-red-100 pb-2">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                <p class="pt-2">By using innerHTML() method we can see the inner html of an element and by using innerText() method we can see the inner text of an element and by using textContent() method we can see the inner text of an element with hidden text</p>
+            </div>
+            <div class="bg-white rounded-xl p-6">
+                <h1 class="font-bold border-b border-dashed border-red-100 pb-2">Question-3: What is event delegation in the DOM?</h1>
+                <p class="pt-2">By assigning the event to the parent node we can get the child element this is the event delegation in the DOM</p>
+            </div>
+            <div class="bg-white rounded-xl p-6">
+                <h1 class="font-bold border-b border-dashed border-red-100 pb-2">Question-4: What is event bubbling in the DOM?</h1>
+                <p class="pt-2">If we click on browser the browser don't know where it is clicked it goes like window>document>html>head>title>body>h>ul>li capturing stage when it gets the target element(li) than if there are any event given inside the capturing stage elements they will bubble like li>h>body>title>head>html>document</p>
+            </div>
+            <div class="bg-white rounded-xl p-6">
+                <h1 class="font-bold border-b border-dashed border-red-100 pb-2">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                <p class="pt-2">To create an element we use createElement() method and we use add() method to give an element class name and other tailwind css class property with value and we use remove() method to remove classes like class name and other tailwind css class with property with value</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./utilities.js"></script>
+    <script src="./main.js"></script>
+    <script src="./blog.js"></script>
+</body>
+
+</html>

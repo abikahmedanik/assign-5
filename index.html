@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#F4F7FF] transition duration-500">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard Website</title>
+    <!-- google font poppins cdn  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- daisy ui and tailwind cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- styles  -->
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-poppins">
+    <!-- header part start  -->
+    <header class="w-10/12 mx-auto mt-3">
+        <div class="navbar p-6 bg-base-100 border border-blue-50 rounded-xl">
+            <div class="navbar-start">
+                <a class="flex items-center gap-2 text-xl"><img class="w-8" src="assets/logo.png" alt="">
+                    <h1 class="font-bold"><span class="font-light">Dev</span>Board</h1>
+                </a>
+            </div>
+            <div class="navbar-end gap-9">
+                <button class="btn rounded-full flex items-center"><input class="w-5 h-5" type="checkbox" checked
+                        name="" id=""><span id="nav-counter" class="font-bold mb-[3px] text-xl">23</span></button>
+                <button id="random-color" class="btn rounded-full w-10 h-10 p-2"><img src="assets/theme-btn.png"
+                        alt=""></button>
+            </div>
+        </div>
+    </header>
+    <!-- header part end  -->
+
+    <!-- main part start  -->
+    <main class="w-10/12 mx-auto mt-3 rounded-xl mb-10">
+        <section class="grid grid-cols-4 gap-3">
+            <!-- left side start  -->
+            <div class="col-span-3 bg-white rounded-xl">
+                <div class="flex gap-6 p-6 border-b-2 border-dashed border-red-100">
+                    <div class="flex items-center gap-2 bg-[#F4F7FF] p-5 rounded-lg">
+                        <button class="btn bg-white rounded-full w-12 h-12"><input class="w-10 h-10" type="checkbox"
+                                checked name="" id=""></button>
+                        <div class="flex flex-col">
+                            <p class="text-xs font-normal text-[#00303C]">Task Assigned</p>
+                            <h3 id="task-assigned" class="font-bold text-xl mb-1">06</h3>
+                        </div>
+                    </div>
+                    <div id="discover-something"
+                        class="flex grow items-center gap-4 bg-gradient-to-tr from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] p-5 rounded-lg cursor-pointer">
+                        <img class="w-11" src="assets/board.png" alt="">
+                        <div>
+                            <h2 class="text-white">Discover Something <br> New Today!</h2>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 bg-[#F4F7FF] p-5 rounded-lg">
+                        <button class="btn bg-white rounded-full w-12 h-12"><img src="assets/calender.png"
+                                alt=""></button>
+                        <div class="flex flex-col">
+                            <p id="dayName" class="font-normal text-[#00303C]">Wed ,</p>
+                            <h3 id="dayName-wise-date" class="font-bold text-base">Jul 28 2025 </h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards start  -->
+                <div class="p-6 grid grid-cols-3 gap-6">
+                    <div class="bg-[#F4F7FF] space-y-4 p-6 rounded-xl">
+                        <button class="btn text-[#00303C]">ShopEase</button>
+                        <h2 class="text-lg font-bold">Fix Mobile Button Issue </h2>
+                        <p class="p-4 bg-white text-xs text-[#00303C] rounded-lg">Debug using Chrome DevTools, check for
+                            overlapp...</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class="text-[#00303C] text-xs">Deadline</p>
+                                <p class="bd-wise-date font-bold text-xs">21 March 2025</p>
+                            </div>
+                            <button class="completed-btn btn bg-[#3752FD] text-white rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#F4F7FF] space-y-4 p-6 rounded-xl">
+                        <button class="btn text-[#00303C]">CloudSync</button>
+                        <h2 class="text-lg font-bold">Add Dark Mode</h2>
+                        <p class="p-4 bg-white text-xs text-[#00303C] rounded-lg">Store the user's preference in
+                            localStorage,
+                            update CSS vari...</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class=" text-[#00303C] text-xs">Deadline</p>
+                                <p class="bd-wise-date font-bold text-xs">21 March 2025</p>
+                            </div>
+                            <button class="completed-btn btn bg-[#3752FD] text-white rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#F4F7FF] space-y-4 p-6 rounded-xl">
+                        <button class="btn text-[#00303C]">SwiftPay</button>
+                        <h2 class="text-lg font-bold">Optimize Home page</h2>
+                        <p class="p-4 bg-white text-xs text-[#00303C] rounded-lg">Debug using Chrome DevTools, check for
+                            overlapp...</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class=" text-[#00303C] text-xs">Deadline</p>
+                                <p class="bd-wise-date font-bold text-xs">21 March 2025</p>
+                            </div>
+                            <button class="completed-btn btn bg-[#3752FD] text-white rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#F4F7FF] space-y-4 p-6 rounded-xl">
+                        <button class="btn text-[#00303C]">ShopEase</button>
+                        <h2 class="text-lg font-bold">Fix Mobile Button Issue </h2>
+                        <p class="p-4 bg-white text-xs text-[#00303C] rounded-lg">Debug using Chrome DevTools, check for
+                            overlapp...</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class=" text-[#00303C] text-xs">Deadline</p>
+                                <p class="bd-wise-date font-bold text-xs">21 March 2025</p>
+                            </div>
+                            <button class="completed-btn btn bg-[#3752FD] text-white rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#F4F7FF] space-y-4 p-6 rounded-xl">
+                        <button class="btn text-[#00303C]">ShopEase</button>
+                        <h2 class="text-lg font-bold">Fix Mobile Button Issue </h2>
+                        <p class="p-4 bg-white text-xs text-[#00303C] rounded-lg">Debug using Chrome DevTools, check for
+                            overlapp...</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class=" text-[#00303C] text-xs">Deadline</p>
+                                <p class="bd-wise-date font-bold text-xs">21 March 2025</p>
+                            </div>
+                            <button class="completed-btn btn bg-[#3752FD] text-white rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                    <div class="bg-[#F4F7FF] space-y-4 p-6 rounded-xl">
+                        <button class="btn text-[#00303C]">ShopEase</button>
+                        <h2 class="text-lg font-bold">Fix Mobile Button Issue </h2>
+                        <p class="p-4 bg-white text-xs text-[#00303C] rounded-lg">Debug using Chrome DevTools, check for
+                            overlapp...</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <p class=" text-[#00303C] text-xs">Deadline</p>
+                                <p class="bd-wise-date font-bold text-xs">21 March 2025</p>
+                            </div>
+                            <button class="completed-btn btn bg-[#3752FD] text-white rounded-lg">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards end  -->
+            </div>
+            <!-- left side end  -->
+
+            <!-- right side bar start  -->
+            <aside class="bg-white rounded-xl">
+                <div class="flex gap-4 justify-center p-5 rounded-lg">
+                    <img src="assets/activity.png" alt="">
+                    <h2>Activity Log</h2>
+                </div>
+                <div class="text-center border-b-2 border-dashed border-red-100 pb-2 mb-5">
+                    <button id="history-btn" class="btn bg-[#3752FD] text-white rounded-lg">Clear History</button>
+                </div>
+                <div id="history" class="w-[250px] mx-auto">
+
+                </div>
+            </aside>
+            <!-- right side bar end  -->
+        </section>
+    </main>
+
+    <script src="./utilities.js"></script>
+    <script src="./main.js"></script>
+    <script src="./blog.js"></script>
+</body>
+
+</html>
